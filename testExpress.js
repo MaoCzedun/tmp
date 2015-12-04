@@ -1,10 +1,12 @@
 var express = require('express'),
     app = express();
     bodyParser = require('body-parser');
-    User = require('./models/User').User;
+    User = require('./models/User').User,
+    jsonFile = require('jsonfile');
 app.use(bodyParser.urlencoded({extended:true}));
 var port = process.env.PORT || 8080,
     router = express.Router();
+
 router.use(function(req,res,next){
 
   console.log('Something  is happening');
@@ -19,6 +21,7 @@ router.route('/users')
       .post(function(req,res){
 
         var user = new User(21,req.body.name);
+        user.save();
         res.json(user);
       })
       .get(function(req,res){
