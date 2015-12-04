@@ -1,25 +1,3 @@
-var users = [
-  {
-    id:1,
-    name:"Petya"
-  },
-  {
-    id:2,
-    name:"Vasya"
-  },
-  {
-    id:3,
-    name:"Ivan"
-  },
-  {
-    id:4,
-    name:"Alex"
-  },
-  {
-    id:5,
-
-  }
-];
 function User(id,name){
   this.id = id;
   this.name = name;
