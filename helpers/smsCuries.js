@@ -4,9 +4,7 @@ function sendSms(phone,smsText){
       soapCoockie = require('soap-cookie'),
       report = require('./errorReporting').report,
       authData={login:"biglapa",password:"power1990"},
-      sender="BigLapa.com",
-      sseid;
-
+      sender="BigLapa.com";
   soap.createClient(url,function(error,client){
        report(error);
        client.Auth(authData,function(error,result){
@@ -16,7 +14,6 @@ function sendSms(phone,smsText){
              report(error);
           });
         });
-
   });
 }
 exports.sendSms =sendSms;

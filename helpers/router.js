@@ -10,7 +10,7 @@ router.get('/',function(req,res){
 });
 router.route('/users')
   .post(function(req,res){
-    var user = new User(22,req.body.name);
+    var user = new User(22,req.body.email,req.body.location,req.body.phoneNumber);
     user.save();
     res.json(user);
   })

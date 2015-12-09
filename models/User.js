@@ -1,9 +1,12 @@
 var jsonFile = require('jsonfile'),
     file='./models/users.json';
-function User(id,name){
+function User(id,email,location,phoneNumber){
+  this.email = email;
   this.id = id;
-  this.name = name;
+  this.location = location;
+  this.phoneNumber = phoneNumber;
 }
+// User.prototype.valida
 User.prototype.find = function(id){
   for(var user in users)
   {
@@ -12,7 +15,6 @@ User.prototype.find = function(id){
         return users[user];
       }
   }
-  // console.log(Object.keys(bears));
 }
 User.prototype.all = function(){
   // jsonFile.readFile('./tmp/lekvi_export.json',function(err,obj){
