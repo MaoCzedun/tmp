@@ -15,11 +15,10 @@ User.prototype.find = function(id){
   // console.log(Object.keys(bears));
 }
 User.prototype.all = function(){
-  var users;
-  jsonFile.readFile(file,function(err,obj){
-    users = obj;
+  // jsonFile.readFile('./tmp/lekvi_export.json',function(err,obj){
+  jsonFile.readFile('./tmp/lekvi_export.json',function(err,obj){
+  return   obj;
   });
-  return users;
 }
 User.prototype.save = function(){
   jsonFile.writeFile(file,this,function(err){
