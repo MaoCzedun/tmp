@@ -10,5 +10,11 @@ module.exports = [
     method: 'GET',
     path: '/salute/{name}',
     handler: controllers.users.salute
-  }
+  },
+  // {
+  //   method:'GET',
+  //   path:'/test',
+  //   handler:controllers.test.test
+  // }
+
 ];

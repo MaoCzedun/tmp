@@ -1,4 +1,13 @@
 {
   "host":"0.0.0.0",
-  "cors":true
+  "cors":true,
+  "port":3001,
+  "database":{
+    "username": "postgres",
+    "password": "qwerty",
+    "database": "hapi",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+
 }

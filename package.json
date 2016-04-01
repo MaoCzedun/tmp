@@ -27,7 +27,8 @@
     "pg": "^3.6.3",
     "pg-hstore": "^2.3.1",
     "require-directory": "^2.0.0",
-    "sequelize": "^2.0.0-rc7"
+    "sequelize": "^2.0.0-rc7",
+    "sequelize-cli": "^2.3.1"
   },
   "devDependencies": {
     "lab": "^4.7.0",

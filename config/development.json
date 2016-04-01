@@ -1,9 +1,9 @@
 {
 	"port":3000,
   "database" : {
-    "username": "development_user",
-    "password": "development_password",
-    "database": "development_database",
+		"username": "postgres",
+    "password": "qwerty",
+    "database": "hapi",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }

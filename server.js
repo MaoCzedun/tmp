@@ -14,27 +14,27 @@ var server = new Hapi.Server({
     }
   }
 });
-server.connection({port:settings.port, host:settings.host});
+server.connection({port:3000, host:'localhost'});
 
 // Export the server to be required elsewhere.
 module.exports = server;
 
-var initDb = function(cb){
-  var sequelize = models.sequelize;
-
-  //Test if we're in a sqlite memory database. we may need to run migrations.
-  if(sequelize.getDialect()==='sqlite' &&
-      (!sequelize.options.storage || sequelize.options.storage === ':memory:')){
-    sequelize.getMigrator({
-      path: process.cwd() + '/migrations',
-    }).migrate().success(function(){
-      // The migrations have been executed!
-      cb();
-    });
-  } else {
-    cb();
-  }
-};
+// var initDb = function(cb){
+  // var sequelize = models.sequelize;
+  //
+  // //Test if we're in a sqlite memory database. we may need to run migrations.
+  // if(sequelize.getDialect()==='sqlite' &&
+  //     (!sequelize.options.storage || sequelize.options.storage === ':memory:')){
+  //   sequelize.getMigrator({
+  //     path: process.cwd() + '/migrations',
+  //   }).migrate().success(function(){
+  //     // The migrations have been executed!
+  //     cb();
+  //   });
+  // } else {
+  //   cb();
+  // }
+// };
 
 var setup = function(done){
 
@@ -48,15 +48,16 @@ var setup = function(done){
   // Add the server routes
   server.route(routes);
 
-  initDb(function(){
-    done();
-  });
+  // initDb(function(){
+  //   done();
+  // });
 };
 
 var start = function(){
   server.start(function(){
     server.log('info', 'Server running at: ' + server.info.uri);
   });
+  console.log(settings);
 };
 
 // If someone runs: "node server.js" then automatically start the server
