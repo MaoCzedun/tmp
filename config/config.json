@@ -1,0 +1,4 @@
+{
+  "views":"./views",
+  "view engine":"ejs"
+}

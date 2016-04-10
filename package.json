@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "hapi-boilerplate",
   "version": "0.0.4",
   "description": "A Hapi boilerplate with Sequelize, Sequelize-CLI and node-config",
@@ -33,5 +34,29 @@
   "devDependencies": {
     "lab": "^4.7.0",
     "sqlite3": "^3.0.2"
+=======
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://z_witch@bitbucket.org/w_startproject/project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/w_startproject/project#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "intel": "^1.1.0",
+    "jsonfile": "^2.2.3"
+>>>>>>> b5b15ee0832d37754868a842a8332213327914f7
   }
 }

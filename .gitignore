@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Created by https://www.gitignore.io
 
 ### Node ###
@@ -29,3 +30,7 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+=======
+tests
+node_modules
+>>>>>>> b5b15ee0832d37754868a842a8332213327914f7
